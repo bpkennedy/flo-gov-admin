@@ -1,5 +1,9 @@
 This guide was created by J Cole Morrison, and he keeps it updated [here](http://start.jcolemorrison.com/building-an-angular-and-express-app-part-1/).  The below steps have already been performed in this repo's code and you can clone this down into a new project if you wish.
 
+Note:  Things added after running this guide:
+* grunt-contrib-less added and setup in Gruntfile
+* ui-router in place of routeProvider
+
 ## Getting the Tools
 
 First make sure you have Node.js installed. They have a nice package installer for all systems.
