@@ -8,7 +8,7 @@
  * Controller of the clientApp
  */
 angular.module('clientApp')
-  .controller('MainCtrl', ['$http', function ($http) {
+  .controller('MainCtrl', function ($http) {
     var req = $http.get('/api/users');
     var scope = this;
     // arrow functions would be nice here
@@ -25,4 +25,4 @@ angular.module('clientApp')
       'AngularJS',
       'Karma'
     ];
-  }]);
+  });

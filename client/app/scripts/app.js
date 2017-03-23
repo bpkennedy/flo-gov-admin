@@ -17,21 +17,61 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.router'
   ])
-  .config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
-        controller: 'MainCtrl',
-        controllerAs: 'main'
-      })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutCtrl',
-        controllerAs: 'about'
-      })
-      .otherwise({
-        redirectTo: '/'
-      });
+  .config(function ($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise('/');
+    $stateProvider.state('root', {
+        url: '',
+        abstract: true,
+        resolve: {
+        },
+        views: {
+            'titlebar@': {
+                templateUrl: 'views/titlebar.html',
+                controller: 'TitlebarCtrl',
+                controllerAs: 'vm'
+            },
+            'footer@': {
+                templateUrl: 'views/footer.html',
+                controller: 'FooterCtrl',
+                controllerAs: 'vm'
+            }
+        }
+    });
+    $stateProvider.state('root.dashboard', {
+        url: '/',
+        resolve: {
+        },
+        data: {
+            pageName: 'MainCtrl',
+            browserTitle: 'Main',
+            description: 'An empty codewrangle template'
+        },
+        views: {
+            'container@': {
+                templateUrl: 'views/main.html',
+                controller: 'MainCtrl',
+                controllerAs: 'vm'
+            }
+        }
+    });
+    $stateProvider.state('root.about', {
+        url: '/about',
+        resolve: {
+        },
+        data: {
+            pageName: 'AboutCtrl',
+            browserTitle: 'About',
+            description: 'template\'s about page.'
+        },
+        views: {
+            'container@': {
+                templateUrl: 'views/about.html',
+                controller: 'AboutCtrl',
+                controllerAs: 'vm'
+            }
+        }
+    });
   });
