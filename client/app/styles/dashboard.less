@@ -1,0 +1,89 @@
+#dashboard-wrapper {
+    margin-top: 50px;
+    height: 100%;
+    .context-container {
+        height: 30px;
+        line-height: 30px;
+        border-bottom: 1px solid #cccccc;
+        box-shadow: 0 0 10px #ddd;
+        font-size: .8em;
+        .filter-button {
+            display: none;
+            @media @breakpoint-mobile {
+                display: inline-block;
+                padding-right: 20px;
+                padding-left: 10px;
+                border-right: 1px solid #cccccc;
+            }
+        }
+        #stats-container {
+            display: inline-block;
+            padding-left: 10px;
+        }
+    }
+    .search-panel {
+        width: 100%;
+        height: 260px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        background-color: #3498db;
+        background-image: url('/images/flo_cityHall.jpeg');
+        @media @breakpoint-tablet {
+            background-image: url('/images/flo_cityHallMedium.jpeg');
+        }
+        @media @breakpoint-mobile {
+            background-image: url('/images/flo_cityHallSmall.jpeg');
+        }
+        background-size: 100%;
+        .ais-search-box {
+            min-width: 400px;
+            #search-box {
+                width: 100%;
+                padding: 5px;
+            }
+        }
+    }
+    .search-info-wrapper {
+        display: flex;
+        align-items: stretch;
+        height: 100%;
+        overflow: auto;
+        .refinement-panel {
+            flex: 1;
+            min-width: 200px;
+            max-width: 200px;
+            padding: 0 6px 0 9px;
+            font-size: .9em;
+            border-right: 1px solid #DDD;
+            margin-top: 10px;
+            @media @breakpoint-mobile {
+                display: none;
+            }
+            h3 {
+                color: #cccccc;
+                text-align: left;
+            }
+            ul {
+                padding-left: 0;
+                margin-left: 0;
+                .ais-refinement-list--header.ais-header {
+                    font-weight: 600;
+                    padding-bottom: 10px;
+                }
+            }
+            hr.wayfinding-rule {
+                background-color: transparent;
+                border-top: 1px solid #E7E7E7;
+                display: block;
+                height: 1px;
+                border-width: 1px 0 0;
+                line-height: 19px;
+            }
+        }
+        .results-panel {
+            flex: 3;
+        }
+    }
+}
