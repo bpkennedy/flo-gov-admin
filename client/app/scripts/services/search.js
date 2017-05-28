@@ -24,7 +24,8 @@ angular.module('clientApp').factory('Search', function($sce) {
             poweredBy: true,
             searchOnEnterKeyPressOnly: true,
             queryHook: function(query, search) {
-                if (query === '' || query === ' ') {
+                query = query.trim();
+                if (query === '') {
                     return;
                 } else {
                     search(query);
@@ -42,7 +43,7 @@ angular.module('clientApp').factory('Search', function($sce) {
                 }
             },
             // transformData: function(data) {
-            //     // console.log(data);
+            //     console.log(data);
             //     return data;
             // }
           })
