@@ -1,32 +1,25 @@
-<div class="jumbotron">
-  <h1>'Allo, 'Allo!</h1>
-  <p class="lead">
-    <img src="images/yeoman.png" alt="I'm Yeoman"><br>
-    Always a pleasure scaffolding your apps.
-  </p>
-  <p><a class="btn btn-lg btn-success" ng-href="#/">Splendid! <i class="fa fa-check"></i></a></p>
-</div>
-
-<div class="row users">
-  <ul>
-    <li ng-repeat="user in vm.awesomeUsers">
-      {{user.email}}
-    </li>
-  </ul>
-</div>
-
-
-<div class="row marketing">
-  <h4>HTML5 Boilerplate</h4>
-  <p>
-    HTML5 Boilerplate is a professional front-end template for building fast, robust, and adaptable web apps or sites.
-  </p>
-
-  <h4>Angular</h4>
-  <p>
-    AngularJS is a toolset for building the framework most suited to your application development.
-  </p>
-
-  <h4>Karma</h4>
-  <p>Spectacular Test Runner for JavaScript.</p>
+<div id="dashboard-wrapper" class="container">
+    <div class="search-panel">
+        <div class="ais-search-box">
+            <input id="search-box" autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="Search for topics" role="textbox" spellcheck="false" type="text" value="" class="ais-search-box--input">
+        </div>
+    </div>
+    <div class="context-container">
+        <div class="filter-button">Filter</div>
+        <div id="stats-container"></div>
+    </div>
+    <div class="search-info-wrapper">
+        <div class="refinement-panel">
+            <h3>Refine by</h3>
+            <div class="categories">
+                <ul id="docType"></ul>
+                <ul id="fileType"></ul>
+            </div>
+            <hr class="wayfinding-rule">
+        </div>
+        <div class="results-panel">
+            <div id="hits-container"></div>
+            <div id="pagination-container"></div>
+        </div>
+    </div>
 </div>

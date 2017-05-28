@@ -13,6 +13,7 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
   <body>
@@ -22,7 +23,6 @@
     <div class="wrapper">
         <div id="title-bar" ui-view="titlebar"></div>
         <div id="content-main" ui-view="container"></div>
-        <div id="footer" ui-view="footer"></div>
     </div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -48,8 +48,15 @@
     <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
     <script src="bower_components/angular-touch/angular-touch.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/algoliasearch/dist/algoliasearch.js"></script>
+    <script src="bower_components/algoliasearch-helper/dist/algoliasearch.helper.js"></script>
+    <script src="bower_components/algoliasearch.angular/index.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
+    <script src="http://cdn.jsdelivr.net/algoliasearch/2.4.6/algoliasearch.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/instantsearch.js/1/instantsearch.min.js"></script>
+
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
@@ -57,6 +64,8 @@
         <script src="scripts/controllers/about.js"></script>
         <script src="scripts/controllers/titlebar.js"></script>
         <script src="scripts/controllers/footer.js"></script>
+        <script src="scripts/services/search.js"></script>
+        <script src="scripts/directives/makehtml.js"></script>
         <!-- endbuild -->
 </body>
 </html>

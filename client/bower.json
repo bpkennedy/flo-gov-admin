@@ -11,7 +11,9 @@
     "angular-route": "^1.4.0",
     "angular-sanitize": "^1.4.0",
     "angular-touch": "^1.4.0",
-    "angular-ui-router": "^0.4.2"
+    "angular-ui-router": "^0.4.2",
+    "algoliasearch-helper": "^2.20.1",
+    "algoliasearch.angular": "https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.angular.js"
   },
   "devDependencies": {
     "angular-mocks": "^1.4.0"

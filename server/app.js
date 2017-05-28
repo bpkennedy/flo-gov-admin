@@ -9,8 +9,11 @@ var cors = require('cors')
 var users = require('./routes/users');
 
 var app = express();
+var oneYear = 31557600000;
+
 
 app.use(cors()) // <--- CORS
+
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'dist', 'favicon.ico')));
@@ -18,7 +21,7 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'), { maxAge: oneYear }));
 
 app.use('/api/users', users);
 
