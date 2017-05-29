@@ -39,6 +39,7 @@
   },
   "dependencies": {
     "grunt": "^0.4.5",
-    "instantsearch.js": "^1.11.11"
+    "instantsearch.js": "^1.11.11",
+    "ng-admin": "^1.0.6"
   }
 }
